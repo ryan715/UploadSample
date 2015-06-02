@@ -7,7 +7,8 @@ Rails.application.routes.draw do
 
   get 'pictures/create'
 
-  resources :cars
+  resources :cars, :pictures
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
