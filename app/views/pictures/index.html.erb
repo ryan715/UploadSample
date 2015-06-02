@@ -2,17 +2,8 @@
 <p>Find me in app/views/pictures/index.html.erb</p>
 <h1> Gallery</h1>
 
-<div id="paintings">
-<% @pictures.each do |picture| %>
-  <div class="painting">
-    <%= link_to image_tag(picture.image_url()), picture if picture.image? %>
-   
-    <div class="actions">
-      <%= link_to "edit", edit_picture_path(picture) %> |
-      <%= link_to "remove", picture, :confirm => 'Are you sure?', :method => :delete %>
-    </div>
-  </div>
-  <% end %>
+<div id="pictures">
+	<%= render @pictures %>
 </div>
 <div class="clear"></div>
 
