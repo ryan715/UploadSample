@@ -16,4 +16,9 @@
 </div>
 <div class="clear"></div>
 
+<%= form_for Picture.new do |f| %>
+	<%= f.label :image, "Upload Picture" %>
+	<%= f.file_field :image, multiple: true, name: "picture[image]" %>
+<% end %>
+
 <p><%= link_to "Add a Picture", new_picture_path %></p>
